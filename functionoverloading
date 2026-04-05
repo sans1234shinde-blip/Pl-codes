@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+class Base{
+    public:
+    virtual void display(){
+        cout<<"Base class function ";
+    }
+    };
+    class Derived:public base{
+        public:
+        void display(){
+            cout<<"Derived class function";
+        }
+};
+int main(){
+    Base *baseptr;
+    Derived d;
+    baseptr=&d;
+    baseptr->display();
+    return 0;
+}
